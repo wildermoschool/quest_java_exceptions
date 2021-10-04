@@ -25,7 +25,7 @@ public class OddSum {
            }
         }
         catch (NumberFormatException e) {
-                System.err.println(e.getMessage());
+                System.err.println(e.fillInStackTrace());
                 return -1;
             }
 
