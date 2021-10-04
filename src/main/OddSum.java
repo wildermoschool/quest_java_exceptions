@@ -18,14 +18,17 @@ public class OddSum {
                 System.out.print(" " + v);
             System.out.println();
         }
-        for (int i = 0; i < args.length; i++) {
-            try {
+        try {
+            for (int i = 0; i < args.length; i++) {
+
                 listInt.add(Integer.parseInt(args[i]));
-            }
-            catch (Exception e) {
-                System.err.println(e.getMessage());
-            }
+           }
         }
+        catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
+                return -1;
+            }
+
 
         res = sum(listInt);
         if (test) {
