@@ -2,8 +2,10 @@ import java.util.ArrayList;
 
 public class OddSum {
 
+
     public static void main(String[] args) {
         run(args, false);
+
     }
 
     public static int run(String[] args, boolean test) {
@@ -17,7 +19,12 @@ public class OddSum {
             System.out.println();
         }
         for (int i = 0; i < args.length; i++) {
-            listInt.add(Integer.parseInt(args[i]));
+            try {
+                listInt.add(Integer.parseInt(args[i]));
+            }
+            catch (Exception e) {
+                System.err.println(e.getMessage());
+            }
         }
 
         res = sum(listInt);
@@ -41,4 +48,5 @@ public class OddSum {
         }
         return result;
     }
+
 }
